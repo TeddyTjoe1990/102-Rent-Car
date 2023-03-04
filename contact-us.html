@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>102 Rent Car - Contact-us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <div class="div-logo">
+                <div class="logo"><img src="https://cdn.glitch.me/c7fd1406-b1d8-4bf5-af96-3665bd63443f%2F102RCLOGO2.jpg?v=1636617643355" alt="102RCLogo"></div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="fleets.html">Fleets</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="head">
+                <h5>We'd love to hear from you</h5>
+            </div>
+
+            <div class="right-col">
+                <img src="https://cdn.glitch.me/c7fd1406-b1d8-4bf5-af96-3665bd63443f%2Fcustomer-services-representative-260nw-324428831.jpg?v=1637343437580" alt="Customers Service Lady">
+
+                <div id="feedback"></div>
+                <form action="/my-handling-form-page" method="post">
+                    <fieldset>
+                        <legend>Contact info</legend>
+                        <label for="name">Name</label><br />
+                        <input type="text" id="name" name="user_name"><br />
+
+                        <label for="address">Address</label></br>
+                        <input type="text" id="address" name="user_address"><br />
+
+                        <label for="phone">Phone</label><br />
+                        <input type="text" id="phone_number" name="user_phone"><br />
+
+                        <label for="mail">E-mail</label><br />
+                        <input type="email" id="mail" name="user_email"><br />
+
+                        <label for="msg">Message</label><br />
+                        <textarea id="msg" name="user_message"></textarea>
+
+                        <div class="button">
+                            <button type="submit">Send your message</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <script>
+                    // get the feedback div element so we can do something with it.
+                    const feedbackElement = document.getElementById('feedback');
+                    // get the form so we can read what was entered in it.
+                    const formElement = document.forms[0];
+                    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                    formElement.addEventListener('submit', function(e) {
+                        // stop the form from doing the default action
+                        e.preventDefault();
+                        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                        feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + '! Thank you for your message. We will get back with you as soon as possible!';
+                        // make the feedback element visible.
+                        feedbackElement.style.display = "block";
+                        // add a class to move everything down so our message doesn't cover it.
+                        document.body.classList.toggle('moveDown');
+                    });
+                </script>
+
+
+                <p class="rightleftcol">
+                    Ocean Park BSD City Unit K16-K18<br /> JL.Pahlawan Seribu Serpong, Lengkong Gudang,<br /> Kec.Serpong, Kota Tangerang Selatan,<br /> Banten - 15310,<br /> Indonesia
+                </p>
+                <p class="rightrightcol">
+                    <strong>102 Rent Car Call Center</strong><br /> Telephone : (+62-21) 555 888 25<br /> Fax : (+62-21) 555 888 30<br /> Whats App : (+62) 8 11 11 10 25<br /> E-mail : 102Rent_Car@gmail.com
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2021 102 Rent Car || Teddy Tjoe</p>
+            <div class="midfoot">
+                <a href="site-plan.html">Site Plan</a>
+                <a href="about-us.html">About Us</a>
+            </div>
+            <div class="right">
+                <a href="http://www.facebook.com" target="_blank"><img src="https://cdn.glitch.com/a1a7d992-1c34-42ad-984a-c6dc42449471%2Ffacebook.png?1538411363027" alt="facebook icon"></a>
+                <a href="http://www.instagram.com" target="_blank"><img src="https://cdn.glitch.me/c7fd1406-b1d8-4bf5-af96-3665bd63443f%2Finstagram.png?v=1636631692679" alt="instag icon"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="https://cdn.glitch.com/a1a7d992-1c34-42ad-984a-c6dc42449471%2Ftwitter.png?1538411362970" alt="twitter icon"></a>
+            </div>
+        </footer>
+</body>
+
+</html>
